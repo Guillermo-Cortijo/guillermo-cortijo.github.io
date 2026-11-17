@@ -1,2 +1,5 @@
-# memogls.github.io
-Portafolio profesional de Guillermo Cortijo - Cyberscurity Architect | IT/OT &amp; AI Security
+# Guillermo Cortijo — Portafolio profesional
+
+Cybersecurity Architect · IT/OT & AI Security.
+
+Sitio: https://memogls.github.io

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guillermo Cortijo | Cybersecurity Architect · IT/OT & AI Security</title>
+<meta name="description" content="Perfil profesional de Guillermo Cortijo — Arquitecto de Ciberseguridad especializado en IT/OT, infraestructura crítica y seguridad de IA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#06090F; --card:rgba(14,21,33,.78); --card-solid:#0E1521; --border:#1C2838; --border-soft:rgba(255,255,255,.07);
+  --text:#F1F5F9; --text-2:#CBD5E1; --text-3:#94A3B8; --text-4:#64748B;
+  --cyan:#22D3EE; --teal:#14B8A6; --amber:#F59E0B; --blue:#3B82F6; --violet:#8B5CF6;
+  --chip:#132033; --grid:rgba(255,255,255,.028); --glow1:rgba(20,184,166,.14); --glow2:rgba(245,158,11,.08);
+  --shadow:0 12px 30px -10px rgba(34,211,238,.18);
+}
+body.light{
+  --bg:#F3F5F8; --card:#FFFFFF; --card-solid:#FFFFFF; --border:#D4DBE4; --border-soft:#E2E8F0;
+  --text:#0B1220; --text-2:#1E293B; --text-3:#475569; --text-4:#64748B;
+  --cyan:#0E7490; --teal:#0F766E; --amber:#B45309; --blue:#1D4ED8; --violet:#6D28D9;
+  --chip:#EEF2F6; --grid:rgba(100,116,139,.12); --glow1:rgba(20,184,166,.10); --glow2:rgba(245,158,11,.07);
+  --shadow:0 14px 28px -10px rgba(15,23,42,.15);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;transition:background .3s,color .3s}
+a{color:inherit;text-decoration:none}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.narrow{max-width:880px}
+.glows{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.glows span{position:absolute;border-radius:50%;filter:blur(70px)}
+.g1{width:420px;height:420px;background:var(--glow1);top:-140px;left:-100px;animation:pulse 6s ease-in-out infinite}
+.g2{width:340px;height:340px;background:var(--glow2);top:38%;right:-110px;animation:float 7s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.08);opacity:.7}}
+@keyframes float{50%{transform:translateY(-14px)}}
+@keyframes grad{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes blink{50%{opacity:.35}}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border-soft)}
+.nav{height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;white-space:nowrap}
+@media (max-width:420px){.logo span:last-child{display:none}}
+.logo-mark{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;font-size:13px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--teal),var(--blue))}
+nav.links{display:flex;gap:22px;font-size:14px;color:var(--text-2)}
+nav.links a:hover{color:var(--cyan)}
+.actions{display:flex;align-items:center;gap:8px}
+.icon-btn{background:var(--chip);border:1px solid var(--border);color:var(--text-2);border-radius:11px;padding:7px 10px;cursor:pointer;font-size:14px;line-height:1}
+.cta-sm{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:10px;font-size:13px;font-weight:600;color:var(--teal);background:color-mix(in srgb,var(--teal) 14%,transparent);border:1px solid color-mix(in srgb,var(--teal) 35%,transparent)}
+.cta-sm:hover{background:color-mix(in srgb,var(--teal) 24%,transparent)}
+#menuBtn{display:none}
+.mobile-menu{display:none;border-top:1px solid var(--border-soft);padding:12px 20px 16px}
+.mobile-menu a{display:block;padding:6px 0;font-size:14px;color:var(--text-2)}
+.mobile-menu.open{display:block}
+
+main{position:relative;z-index:1;padding:48px 0 80px}
+section{padding:48px 0;scroll-margin-top:70px}
+.eyebrow{font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-bottom:6px}
+h2.title{font-size:clamp(24px,3.2vw,32px);font-weight:800;letter-spacing:-.01em}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 36px}
+.sec-head p{color:var(--text-3);font-size:14px;margin-top:8px}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;transition:transform .3s cubic-bezier(.4,0,.2,1),border-color .3s,box-shadow .3s}
+.card:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--cyan) 55%,transparent);box-shadow:var(--shadow)}
+body.light .card{box-shadow:0 4px 14px -4px rgba(15,23,42,.06)}
+
+/* hero */
+.badge{display:inline-flex;align-items:center;gap:8px;padding:5px 13px;border-radius:999px;background:var(--chip);border:1px solid var(--border);font-size:12px;font-weight:500;color:var(--text-2)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--teal);animation:blink 2s infinite}
+h1{font-size:clamp(34px,6.4vw,64px);font-weight:800;letter-spacing:-.025em;line-height:1.05;margin:18px 0 14px}
+.grad{background:linear-gradient(90deg,var(--teal),var(--cyan),var(--amber),var(--teal));background-size:250% 250%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:grad 9s ease infinite}
+.role{font-size:clamp(16px,2vw,20px);font-weight:600;color:var(--text-2)}
+.lead{color:var(--text-3);max-width:700px;margin-top:12px;font-size:15.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{font-family:"JetBrains Mono",monospace;font-size:12px;padding:5px 10px;border-radius:7px;background:var(--chip);border:1px solid var(--border);color:var(--text-2)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{padding:12px 20px;border-radius:12px;font-weight:600;font-size:14px;transition:transform .2s;display:inline-flex;align-items:center;gap:8px}
+.btn:hover{transform:scale(1.04)}
+.btn-primary{background:linear-gradient(90deg,var(--teal),#0891B2);color:#fff;box-shadow:0 10px 24px -8px rgba(20,184,166,.5)}
+.btn-ghost{background:var(--chip);border:1px solid var(--border);color:var(--text-2)}
+.btn-ghost:hover{border-color:var(--cyan)}
+.metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:48px 0 8px}
+.metric{padding:18px}
+.metric b{display:block;font-family:"JetBrains Mono",monospace;font-size:clamp(22px,2.6vw,30px);font-weight:700;background:linear-gradient(90deg,var(--cyan),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+.metric:nth-child(2) b{background-image:linear-gradient(90deg,var(--amber),#FB923C)}
+.metric:nth-child(3) b{background-image:linear-gradient(90deg,var(--blue),var(--violet))}
+.metric:nth-child(4) b{background-image:linear-gradient(90deg,var(--teal),#34D399)}
+.metric:nth-child(5) b{background-image:linear-gradient(90deg,var(--violet),#EC4899)}
+.metric span{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--text-3);margin-top:4px}
+
+/* about */
+.about{padding:34px;border-radius:24px;position:relative;overflow:hidden}
+.about h3{font-size:clamp(22px,2.6vw,28px);font-weight:800;margin-bottom:14px}
+.about p{color:var(--text-2);margin-bottom:12px;font-size:15px}
+.about p.muted{color:var(--text-3)}
+.about strong{color:var(--text)}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.pillar{padding:14px 16px;border-radius:14px;background:var(--chip);border:1px solid var(--border)}
+.pillar .mono{font-size:11px;color:var(--amber);text-transform:uppercase;letter-spacing:.1em}
+.pillar div:last-child{font-size:14px;font-weight:600;margin-top:3px}
+
+/* initiatives */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.proj{padding:24px;border-left:4px solid var(--teal);display:flex;flex-direction:column;gap:14px}
+.proj.amber{border-left-color:var(--amber)} .proj.blue{border-left-color:var(--blue)} .proj.violet{border-left-color:var(--violet)}
+.proj-top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.tag{font-family:"JetBrains Mono",monospace;font-size:11.5px;font-weight:600;padding:3px 9px;border-radius:6px;background:color-mix(in srgb,var(--teal) 15%,transparent);color:var(--teal)}
+.amber .tag{background:color-mix(in srgb,var(--amber) 15%,transparent);color:var(--amber)}
+.blue .tag{background:color-mix(in srgb,var(--blue) 15%,transparent);color:var(--blue)}
+.violet .tag{background:color-mix(in srgb,var(--violet) 15%,transparent);color:var(--violet)}
+.stack-line{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--text-4)}
+.proj h3{font-size:19px;font-weight:700}
+.proj p{font-size:14px;color:var(--text-2)}
+.flow{padding:12px;border-radius:12px;background:color-mix(in srgb,var(--bg) 70%,var(--card-solid));border:1px solid var(--border);font-family:"JetBrains Mono",monospace}
+.flow-h{display:flex;justify-content:space-between;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--cyan);margin-bottom:8px}
+.flow-h .ok{color:var(--teal)}
+.flow-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:11px}
+.node{padding:3px 8px;border-radius:6px;background:var(--chip);border:1px solid var(--border);color:var(--text-2)}
+.node.hl{border-color:color-mix(in srgb,var(--cyan) 50%,transparent);color:var(--cyan)}
+.arrow{color:var(--cyan)}
+.proj ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.proj li{font-size:13px;color:var(--text-2);padding-left:16px;position:relative}
+.proj li::before{content:"▸";position:absolute;left:0;color:var(--cyan)}
+.proj li strong{color:var(--text)}
+
+/* timeline */
+.timeline{position:relative;display:flex;flex-direction:column;gap:26px}
+.timeline::before{content:"";position:absolute;left:13px;top:6px;bottom:6px;width:2px;background:var(--border)}
+.tl-item{position:relative;padding-left:42px}
+.tl-dot{position:absolute;left:7px;top:22px;width:14px;height:14px;border-radius:50%;background:var(--text-4);border:3px solid var(--bg)}
+.tl-item.now .tl-dot{background:var(--teal);box-shadow:0 0 0 4px color-mix(in srgb,var(--teal) 25%,transparent);animation:blink 2.4s infinite}
+.tl-card{padding:22px}
+.tl-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap;border-bottom:1px solid var(--border);padding-bottom:12px;margin-bottom:12px}
+.tl-head h3{font-size:17px;font-weight:700}
+.org{font-size:14px;font-weight:600;color:var(--cyan)}
+.date{font-family:"JetBrains Mono",monospace;font-size:11.5px;padding:4px 9px;border-radius:6px;background:var(--chip);color:var(--text-2);white-space:nowrap}
+.role-sub{margin-top:14px;padding-top:12px;border-top:1px dashed var(--border)}
+.role-sub h4{font-size:15px;font-weight:700;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.tl-card ul{list-style:none;display:flex;flex-direction:column;gap:7px;margin-top:8px}
+.tl-card li{font-size:13.5px;color:var(--text-2);padding-left:16px;position:relative}
+.tl-card li::before{content:"▪";position:absolute;left:0;color:var(--blue);font-weight:700}
+.tl-card li strong{color:var(--text)}
+.compact{padding:16px 20px}
+.compact .tl-head{border:0;padding:0;margin:0}
+
+/* skills */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.skill{padding:20px}
+.skill h3{font-size:14.5px;font-weight:700;display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font-size:12px;padding:4px 10px;border-radius:7px;background:var(--chip);color:var(--text-2);border:1px solid transparent;transition:.2s}
+.pill:hover{border-color:color-mix(in srgb,var(--cyan) 55%,transparent);color:var(--cyan);transform:translateY(-1px)}
+
+/* education */
+.edu{padding:20px}
+.edu .mono{font-size:11.5px;margin-bottom:4px}
+.edu h3{font-size:15px;font-weight:700}
+.edu p{font-size:12.5px;color:var(--text-3);margin-top:4px}
+.certs{padding:22px;margin-top:18px}
+.certs-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px}
+.certs-head h3{font-size:16px;font-weight:700}
+.cert-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cert{display:flex;justify-content:space-between;gap:10px;padding:11px 14px;border-radius:11px;background:var(--chip);border:1px solid var(--border);font-size:13px}
+.cert b{font-weight:600}
+.cert small{display:block;color:var(--text-3);font-size:11.5px}
+.cert .yr{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--text-3);white-space:nowrap}
+.cert.star{border-color:color-mix(in srgb,var(--amber) 45%,transparent)}
+.cert.star .yr{color:var(--amber)}
+
+/* speaking */
+.talk{padding:20px;display:flex;flex-direction:column;gap:8px}
+.talk .mono{font-size:11px;color:var(--amber);text-transform:uppercase;letter-spacing:.1em}
+.talk h3{font-size:15.5px;font-weight:700}
+.talk p{font-size:13px;color:var(--text-3)}
+
+/* contact */
+.contact{padding:34px;border-radius:24px}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+.c-item{display:flex;align-items:center;gap:12px;padding:16px;border-radius:14px;background:var(--chip);border:1px solid var(--border);transition:.2s}
+a.c-item:hover{border-color:color-mix(in srgb,var(--cyan) 55%,transparent);transform:translateY(-2px)}
+.c-ico{width:40px;height:40px;flex-shrink:0;border-radius:11px;display:grid;place-items:center;background:color-mix(in srgb,var(--blue) 18%,transparent);color:var(--blue)}
+.c-item small{display:block;font-size:11.5px;color:var(--text-3)}
+.c-item div div{font-size:14px;font-weight:700}
+footer{text-align:center;font-size:12px;color:var(--text-4);padding:24px 0 40px;position:relative;z-index:1}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.on{opacity:1;transform:none}
+
+@media (max-width:900px){
+  nav.links{display:none} #menuBtn{display:inline-block}
+  .metrics{grid-template-columns:repeat(2,1fr)} .metric:last-child{grid-column:span 2}
+  .grid2,.grid3,.cert-list,.contact-grid,.pillars{grid-template-columns:1fr}
+  .about,.contact{padding:24px}
+}
+@media (min-width:901px) and (max-width:1050px){.grid3{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* Paleta: Tinta & Lima */
+:root{--bg:#080B14;--card:rgba(17,22,38,.82);--card-solid:#111626;--border:#222B42;--border-soft:rgba(255,255,255,.06);
+--text:#EEF1F8;--text-2:#C8CEDD;--text-3:#8E97AD;--text-4:#646D84;
+--cyan:#B6F23A;--teal:#9EE02A;--amber:#7DD3FC;--blue:#A5B4FC;--violet:#C4B5FD;--chip:#161C2E;
+--glow1:rgba(158,224,42,.09);--glow2:rgba(125,211,252,.07);--shadow:0 12px 30px -10px rgba(182,242,58,.18)}
+body.light{--bg:#F4F6FA;--card:#FFFFFF;--card-solid:#FFFFFF;--border:#D9DEE8;--border-soft:#E6EAF1;--text:#0A0F1C;--text-2:#232B3E;--text-3:#545E74;--text-4:#7A8399;
+--cyan:#4D7C0F;--teal:#3F6212;--amber:#0369A1;--blue:#4338CA;--violet:#6D28D9;--chip:#EDF0F5}
+.btn-primary{background:linear-gradient(90deg,#B6F23A,#86C91F);color:#0A0F1C;box-shadow:0 10px 24px -8px rgba(158,224,42,.45)}
+body.light .btn-primary{background:linear-gradient(90deg,#4D7C0F,#3F6212);color:#fff}
+.logo-mark{background:linear-gradient(135deg,#B6F23A,#5B8F14);color:#0A0F1C}
+.grad{background-image:linear-gradient(90deg,#B6F23A,#7DD3FC,#B6F23A)}
+body.light .grad{background-image:linear-gradient(90deg,#4D7C0F,#0369A1,#4D7C0F)}
+.metric b,.metric:nth-child(n) b{background-image:linear-gradient(90deg,#B6F23A,#D9F99D)}
+.metric:nth-child(2) b,.metric:nth-child(4) b{background-image:linear-gradient(90deg,#7DD3FC,#A5B4FC)}
+body.light .metric:nth-child(n) b{background-image:linear-gradient(90deg,#4D7C0F,#0369A1)}
+</style>
+</head>
+<body>
+<div class="glows"><span class="g1"></span><span class="g2"></span></div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo"><span class="logo-mark">GC</span><span>Guillermo Cortijo</span></a>
+    <nav class="links">
+      <a href="#perfil">Perfil</a><a href="#iniciativas">Iniciativas</a><a href="#experiencia">Experiencia</a>
+      <a href="#competencias">Competencias</a><a href="#formacion">Formación</a><a href="#speaking">Speaking</a><a href="#contacto">Contacto</a>
+    </nav>
+    <div class="actions">
+      <button class="icon-btn" id="themeBtn" aria-label="Cambiar tema claro u oscuro" title="Cambiar tema">🌙</button>
+      <a class="cta-sm" href="https://www.linkedin.com/in/guillermocortijo-ciberseguridad/" target="_blank" rel="noopener noreferrer">Conectemos</a>
+      <button class="icon-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#perfil">Perfil</a><a href="#iniciativas">Iniciativas</a><a href="#experiencia">Experiencia</a>
+    <a href="#competencias">Competencias</a><a href="#formacion">Formación</a><a href="#speaking">Speaking</a><a href="#contacto">Contacto</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="wrap" style="padding-top:8px">
+    <span class="badge"><span class="dot"></span>Cybersecurity Architect · IT/OT &amp; AI Security</span>
+    <h1>GUILLERMO <span class="grad">CORTIJO</span></h1>
+    <p class="role">Arquitecto de Ciberseguridad — Infraestructura Crítica, Ciberseguridad Industrial &amp; Seguridad de IA</p>
+    <p class="lead">Responsable del diseño de arquitecturas de seguridad para entornos donde un incidente no solo afecta datos: detiene plantas, centrales y procesos críticos. Más de 15 años en TI y ciberseguridad en energía, banca, telecomunicaciones e industria, hoy liderando la arquitectura de ciberseguridad y la adopción segura de IA en un grupo industrial con operaciones en varios países.</p>
+    <div class="chips">
+      <span class="chip">📍 Lima, Perú</span>
+      <span class="chip">🏭 IT · OT/ICS · Cloud · IA</span>
+      <span class="chip">🛡️ ISA/IEC 62443 · NIST CSF · ISO 27001</span>
+    </div>
+    <div class="btns">
+      <a href="#iniciativas" class="btn btn-primary">Ver iniciativas &amp; arquitecturas</a>
+      <a href="https://www.linkedin.com/in/guillermocortijo-ciberseguridad/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+        Perfil en LinkedIn
+      </a>
+    </div>
+
+    <div class="metrics reveal">
+      <div class="card metric"><b>15+</b><span>Años en TI y ciberseguridad</span></div>
+      <div class="card metric"><b>IT⇄OT</b><span>Convergencia segura</span></div>
+      <div class="card metric"><b>62443</b><span>Doble especialista ISA/IEC</span></div>
+      <div class="card metric"><b>CERT</b><span>Ex-líder CERT Enel Perú</span></div>
+      <div class="card metric"><b>2</b><span>Maestrías (UCM · UNMSM)</span></div>
+    </div>
+  </section>
+
+  <!-- PERFIL -->
+  <section id="perfil" class="wrap reveal">
+    <div class="card about">
+      <div class="eyebrow">Perfil profesional</div>
+      <h3>Arquitectura, gobierno y seguridad by design</h3>
+      <p>Arquitecto de Ciberseguridad en <strong>Grupo UNACEM</strong>, a cargo de la definición de las arquitecturas de seguridad corporativa para entornos <strong>IT y sistemas industriales OT/ICS</strong>, los estándares técnicos que protegen la continuidad de procesos críticos y el roadmap de adopción de nuevas tecnologías de ciberseguridad para las unidades de negocio del grupo.</p>
+      <p class="muted">Sólida trayectoria que combina la operación (respuesta a incidentes, CERT, gestión de riesgos) con la arquitectura y el gobierno. Hoy su foco está en la intersección entre <strong>ciberseguridad industrial e inteligencia artificial</strong>: cómo adoptar IA generativa y agentes a escala corporativa sin abrir nuevas superficies de ataque, y cómo extender el monitoreo y la gobernanza a esos nuevos riesgos.</p>
+      <div class="pillars">
+        <div class="pillar"><div class="mono">01 · Arquitectura</div><div>Seguridad corporativa IT, cloud e identidad</div></div>
+        <div class="pillar"><div class="mono">02 · Industrial</div><div>Protección OT/ICS e infraestructura crítica</div></div>
+        <div class="pillar"><div class="mono">03 · IA</div><div>Gobierno y seguridad de IA generativa y agéntica</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INICIATIVAS -->
+  <section id="iniciativas" class="wrap reveal">
+    <div class="sec-head">
+      <div class="eyebrow">Iniciativas &amp; arquitecturas</div>
+      <h2 class="title">Iniciativas que lidera</h2>
+      <p>Programas de seguridad a escala de grupo: de la planta industrial a la adopción corporativa de IA.</p>
+    </div>
+    <div class="grid2">
+      <article class="card proj violet">
+        <div class="proj-top"><span class="tag">IA generativa a escala</span><span class="stack-line">Gobierno · Identidad · Datos</span></div>
+        <h3>Adopción corporativa de IA con gobernanza</h3>
+        <p>Arquitectura y gobierno para desplegar asistentes de IA generativa en un grupo industrial multinacional, con controles de identidad, protección de datos y trazabilidad desde el día uno.</p>
+        <div class="flow">
+          <div class="flow-h"><span>Flujo de control</span><span class="ok">● Security by design</span></div>
+          <div class="flow-row"><span class="node">Usuarios</span><span class="arrow">→</span><span class="node">SSO / IdP</span><span class="arrow">→</span><span class="node hl">Plataforma IA</span><span class="arrow">→</span><span class="node">Logs &amp; SOC</span></div>
+        </div>
+        <ul>
+          <li><strong>Gobierno:</strong> políticas de uso, clasificación de datos y criterios de aprobación de casos de uso.</li>
+          <li><strong>Controles:</strong> identidad federada, mínimos privilegios en conectores y registro de actividad.</li>
+          <li><strong>Habilitación:</strong> talleres de productividad con IA para equipos de negocio.</li>
+        </ul>
+      </article>
+
+      <article class="card proj amber">
+        <div class="proj-top"><span class="tag">OT / ICS</span><span class="stack-line">ISA/IEC 62443 · Modelo Purdue</span></div>
+        <h3>Estrategia de ciberseguridad industrial</h3>
+        <p>Adopción de la estrategia de ciberseguridad OT en las unidades de negocio del grupo: visibilidad de activos industriales, segmentación y lineamientos para la convergencia segura IT/OT.</p>
+        <div class="flow">
+          <div class="flow-h"><span>Segmentación por niveles</span><span class="ok">● Defensa en profundidad</span></div>
+          <div class="flow-row"><span class="node">Niveles 4-5 · IT</span><span class="arrow">⇄</span><span class="node hl">DMZ industrial</span><span class="arrow">⇄</span><span class="node">Niveles 0-3 · OT</span></div>
+        </div>
+        <ul>
+          <li><strong>Visibilidad:</strong> nuevas capacidades para identificar riesgos en infraestructura y procesos.</li>
+          <li><strong>Riesgo:</strong> evaluación por zonas y conductos bajo ISA/IEC 62443.</li>
+          <li><strong>Gobernanza:</strong> lineamientos transversales para redes industriales y corporativas.</li>
+        </ul>
+      </article>
+
+      <article class="card proj blue">
+        <div class="proj-top"><span class="tag">Arquitectura corporativa</span><span class="stack-line">AWS · Azure · IAM</span></div>
+        <h3>Framework de arquitectura de ciberseguridad</h3>
+        <p>Estándares y lineamientos técnicos de seguridad aplicables a todas las subsidiarias del grupo, para que cada proyecto nazca seguro en vez de corregirse después.</p>
+        <div class="flow">
+          <div class="flow-h"><span>Ciclo de proyecto</span><span class="ok">● Security by design</span></div>
+          <div class="flow-row"><span class="node">Iniciativa</span><span class="arrow">→</span><span class="node hl">Estándares</span><span class="arrow">→</span><span class="node">Revisión de arquitectura</span><span class="arrow">→</span><span class="node">Producción</span></div>
+        </div>
+        <ul>
+          <li><strong>Cloud:</strong> lineamientos para cargas en AWS y Azure.</li>
+          <li><strong>Identidad:</strong> gobierno de identidades y accesos como perímetro principal.</li>
+          <li><strong>Roadmap:</strong> selección y adopción de nuevas tecnologías de ciberseguridad.</li>
+        </ul>
+      </article>
+
+      <article class="card proj">
+        <div class="proj-top"><span class="tag">Detección</span><span class="stack-line">GenAI · Agentes · SOC</span></div>
+        <h3>Modelamiento de amenazas de IA</h3>
+        <p>Modelo de amenazas para IA generativa y agéntica, traducido en casos de uso de monitoreo que el SOC puede operar: qué observar, desde qué fuentes y con qué prioridad.</p>
+        <div class="flow">
+          <div class="flow-h"><span>Del riesgo a la detección</span><span class="ok">● Operable</span></div>
+          <div class="flow-row"><span class="node">Amenazas IA</span><span class="arrow">→</span><span class="node">Fuentes de datos</span><span class="arrow">→</span><span class="node hl">Casos de uso SOC</span><span class="arrow">→</span><span class="node">Roadmap</span></div>
+        </div>
+        <ul>
+          <li><strong>Cobertura:</strong> prompt injection, exfiltración vía conectores y abuso de agentes.</li>
+          <li><strong>Operación:</strong> priorización por impacto y madurez de las fuentes.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section id="experiencia" class="wrap narrow reveal">
+    <div class="sec-head">
+      <div class="eyebrow">Trayectoria</div>
+      <h2 class="title">Experiencia profesional</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item now"><span class="tl-dot"></span>
+        <div class="card tl-card">
+          <div class="tl-head"><div><h3>Arquitecto de Ciberseguridad</h3><div class="org">Grupo UNACEM</div></div><span class="date">feb 2026 – Actualidad</span></div>
+          <ul>
+            <li><strong>Diseño de arquitecturas:</strong> seguridad corporativa para entornos IT y sistemas industriales OT/ICS.</li>
+            <li><strong>Infraestructura crítica:</strong> estándares y lineamientos técnicos para asegurar la continuidad de procesos críticos.</li>
+            <li><strong>Roadmap e innovación:</strong> estrategia tecnológica y adopción de nuevas soluciones de ciberseguridad.</li>
+            <li><strong>Gobernanza IT/OT:</strong> lineamientos transversales para la convergencia segura de redes industriales y corporativas.</li>
+            <li><strong>Security by design:</strong> ciberseguridad integrada en los proyectos de innovación y transformación digital del grupo, incluida la adopción de IA.</li>
+          </ul>
+          <div class="role-sub">
+            <h4><span>Corporate Cyber Security Supervisor</span><span class="date">sept 2023 – abr 2026</span></h4>
+            <ul>
+              <li>Nuevas capacidades de visibilidad para identificar riesgos en la infraestructura y procesos de las unidades de negocio.</li>
+              <li>Liderazgo tecnológico en la definición y selección de nuevas tecnologías de ciberseguridad para el grupo.</li>
+              <li>Adopción de la estrategia de ciberseguridad OT en las unidades de negocio.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item"><span class="tl-dot"></span>
+        <div class="card tl-card">
+          <div class="tl-head"><div><h3>Oficial de Seguridad de la Información &amp; Ciberseguridad</h3><div class="org">Celepsa</div></div><span class="date">may 2020 – abr 2026</span></div>
+          <ul>
+            <li>Diseño e implementación de la estrategia de seguridad de la información y ciberseguridad, incluida la ciberseguridad industrial (OT).</li>
+            <li>Alineamiento entre los objetivos de seguridad y la transformación digital de la compañía.</li>
+            <li>Arquitecturas y lineamientos de ciberseguridad, evaluación de riesgos y planes de mitigación (como Gestor de Ciberseguridad, 2020–2022).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item"><span class="tl-dot"></span>
+        <div class="card tl-card">
+          <div class="tl-head"><div><h3>Consultor de Ciberseguridad &amp; Infraestructura TI</h3><div class="org">Enel Perú</div></div><span class="date">abr 2016 – may 2020</span></div>
+          <ul>
+            <li><strong>CERT:</strong> responsable del Cyber Emergency Readiness Team para Perú y miembro del CERT global de la corporación.</li>
+            <li><strong>Respuesta:</strong> contingencia tecnológica ante incidentes de ciberseguridad y eventos de crisis.</li>
+            <li><strong>Convergencia IT/OT:</strong> proyectos de cloud, networking, IoT e IAM; protección perimetral de red corporativa e industrial.</li>
+            <li><strong>Marcos:</strong> adopción de NIST Cybersecurity Framework y asesoría de riesgo en proyectos de transformación digital.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item"><span class="tl-dot"></span>
+        <div class="card tl-card compact">
+          <div class="tl-head"><div><h3>Analista de Tecnología de Información</h3><div class="org">Banco de Crédito BCP</div></div><span class="date">2012 – 2016</span></div>
+        </div>
+      </div>
+      <div class="tl-item"><span class="tl-dot"></span>
+        <div class="card tl-card compact">
+          <div class="tl-head"><div><h3>Analista de Seguridad y Prevención de Fraude</h3><div class="org">Telefónica Gestión de Servicios Compartidos</div></div><span class="date">2011 – 2012</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPETENCIAS -->
+  <section id="competencias" class="wrap reveal">
+    <div class="sec-head">
+      <div class="eyebrow">Capacidades</div>
+      <h2 class="title">Competencias &amp; dominios</h2>
+    </div>
+    <div class="grid3">
+      <div class="card skill"><h3>🏗️ Arquitectura de seguridad</h3><div class="pills"><span class="pill">Security by Design</span><span class="pill">Zero Trust</span><span class="pill">Estándares técnicos</span><span class="pill">Revisión de arquitectura</span><span class="pill">Roadmap tecnológico</span></div></div>
+      <div class="card skill"><h3>🏭 Ciberseguridad industrial</h3><div class="pills"><span class="pill">OT / ICS</span><span class="pill">ISA/IEC 62443</span><span class="pill">Modelo Purdue</span><span class="pill">Infraestructura crítica</span><span class="pill">Convergencia IT/OT</span></div></div>
+      <div class="card skill"><h3>🤖 Seguridad de IA</h3><div class="pills"><span class="pill">Gobierno de IA</span><span class="pill">GenAI &amp; agentes</span><span class="pill">Threat modeling IA</span><span class="pill">Prompt injection</span><span class="pill">Adopción corporativa</span></div></div>
+      <div class="card skill"><h3>☁️ Cloud &amp; identidad</h3><div class="pills"><span class="pill">AWS</span><span class="pill">Azure</span><span class="pill">IAM</span><span class="pill">Gobierno de identidades</span><span class="pill">Protección perimetral</span></div></div>
+      <div class="card skill"><h3>🚨 Operación &amp; respuesta</h3><div class="pills"><span class="pill">CERT / CSIRT</span><span class="pill">Respuesta a incidentes</span><span class="pill">ISO/IEC 27035</span><span class="pill">Casos de uso SOC</span><span class="pill">Gestión de crisis</span></div></div>
+      <div class="card skill"><h3>📐 Gobierno &amp; riesgo</h3><div class="pills"><span class="pill">NIST CSF</span><span class="pill">ISO 27001</span><span class="pill">ISO 27032</span><span class="pill">Gestión de riesgos</span><span class="pill">ITIL</span></div></div>
+    </div>
+  </section>
+
+  <!-- FORMACIÓN -->
+  <section id="formacion" class="wrap narrow reveal">
+    <div class="sec-head">
+      <div class="eyebrow">Educación</div>
+      <h2 class="title">Formación &amp; certificaciones</h2>
+    </div>
+    <div class="grid2">
+      <div class="card edu"><div class="mono" style="color:var(--cyan)">Universidad Complutense de Madrid</div><h3>Máster en Ciberseguridad</h3><p>2020 – 2021 · Seguridad de infraestructuras digitales, gestión de incidentes y ciberdefensa</p></div>
+      <div class="card edu"><div class="mono" style="color:var(--teal)">Universidad Nacional Mayor de San Marcos</div><h3>Maestría en Gobierno de Tecnologías de Información</h3><p>2014 – 2015</p></div>
+      <div class="card edu"><div class="mono" style="color:var(--violet)">Universidad Peruana de Ciencias Aplicadas</div><h3>Ingeniería de Sistemas de Información</h3><p>2006 – 2010</p></div>
+      <div class="card edu"><div class="mono" style="color:var(--amber)">EGADE · IEBS Business School</div><h3>Design Thinking · Transformación Digital</h3><p>Programas de especialización · 2018</p></div>
+    </div>
+    <div class="card certs">
+      <div class="certs-head"><h3>Certificaciones</h3><span class="mono" style="font-size:11px;color:var(--teal)">✓ Verificables en LinkedIn</span></div>
+      <div class="cert-list">
+        <div class="cert star"><div><b>ISA/IEC 62443 Cybersecurity Risk Assessment Specialist</b><small>ISA</small></div><span class="yr">2024</span></div>
+        <div class="cert star"><div><b>ISA/IEC 62443 Cybersecurity Fundamentals Specialist</b><small>ISA</small></div><span class="yr">2023</span></div>
+        <div class="cert"><div><b>ISO 27001 Lead Implementer</b><small>PECB</small></div><span class="yr">2019</span></div>
+        <div class="cert"><div><b>ISO 27032 Lead Cyber Security Manager</b><small>PECB</small></div><span class="yr">2019</span></div>
+        <div class="cert"><div><b>Lead Cybersecurity Professional (LCSPC)</b><small>CertiProf</small></div><span class="yr">2019</span></div>
+        <div class="cert"><div><b>CSIRT Management Training</b><small>OEA</small></div><span class="yr">2018</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPEAKING -->
+  <section id="speaking" class="wrap reveal">
+    <div class="sec-head">
+      <div class="eyebrow">Comunidad</div>
+      <h2 class="title">Speaking, docencia &amp; contenido</h2>
+    </div>
+    <div class="grid3">
+      <div class="card talk"><div class="mono">Panel · 2026</div><h3>CIO &amp; CISO Edge Perú</h3><p>Panelista en “Desarrollo de IA a gran escala y gestión de riesgos”.</p></div>
+      <div class="card talk"><div class="mono">Entrevista · Energía</div><h3>#CyberSecurityForEnergy</h3><p>Entrevistado por Revista Energía y Negocios como representante del CERT Enel para Perú.</p></div>
+      <div class="card talk"><div class="mono">Talleres · Contenido</div><h3>IA aplicada &amp; ciberseguridad</h3><p>Talleres corporativos de productividad con IA y publicaciones en LinkedIn sobre gobierno y seguridad de IA.</p></div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="wrap narrow reveal">
+    <div class="card contact">
+      <div class="sec-head" style="margin-bottom:24px">
+        <div class="eyebrow">Contacto</div>
+        <h2 class="title">Conversemos</h2>
+        <p>Abierto a speaking, docencia, advisory en ciberseguridad industrial y gobierno de IA.</p>
+      </div>
+      <div class="contact-grid">
+        <a class="c-item" href="https://www.linkedin.com/in/guillermocortijo-ciberseguridad/" target="_blank" rel="noopener noreferrer">
+          <span class="c-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></span>
+          <div><small>LinkedIn</small><div>guillermocortijo-ciberseguridad</div></div>
+        </a>
+        <div class="c-item"><span class="c-ico" style="background:color-mix(in srgb,var(--teal) 18%,transparent);color:var(--teal)">📍</span><div><small>Ubicación</small><div>Lima, Perú</div></div></div>
+        <div class="c-item"><span class="c-ico" style="background:color-mix(in srgb,var(--amber) 18%,transparent);color:var(--amber)">🗣️</span><div><small>Idiomas</small><div>Español · Inglés</div></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="yr"></span> Guillermo Cortijo · Cybersecurity Architect · IT/OT &amp; AI Security</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('themeBtn');
+  function apply(t){document.body.classList.toggle('light',t==='light');btn.textContent=t==='light'?'☀️':'🌙';}
+  var saved=null;try{saved=localStorage.getItem('gc-theme');}catch(e){}
+  apply(saved||'dark');
+  btn.addEventListener('click',function(){var t=document.body.classList.contains('light')?'dark':'light';apply(t);try{localStorage.setItem('gc-theme',t);}catch(e){}});
+  var mb=document.getElementById('menuBtn'),mm=document.getElementById('mobileMenu');
+  mb.addEventListener('click',function(){mm.classList.toggle('open');});
+  mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mm.classList.remove('open');});});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:.08});
+    els.forEach(function(el){io.observe(el);});
+  } else els.forEach(function(el){el.classList.add('on');});
+})();
+</script>
+</body>
+</html>
